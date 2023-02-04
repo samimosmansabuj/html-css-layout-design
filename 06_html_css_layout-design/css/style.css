@@ -1,0 +1,185 @@
+body{
+    background-color: black;
+}
+
+
+
+#wrapper{
+    width: 90%;
+    height: 1200px;
+    background-color: aqua;
+    margin: auto;
+}
+
+
+
+
+
+#menu_wrapper{
+    float: left;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 0, 0);
+}
+#menu_wrapper ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;   
+}
+#menu_wrapper ul li{
+    float: left;
+    width: 10%;
+    /* border: 1px solid; */
+    margin-right: 3px;
+    padding: 16px 5px;
+    text-align: center;
+    background-color: rgba(15, 90, 90, 0.432);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0px 20px;
+    transition: all 0.5s;
+}
+#menu_wrapper ul li:hover{
+    background-color: rgb(238, 255, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 20px 0px;
+}
+
+
+ 
+
+
+
+#header_wrapper{
+    float: left;
+    width: 100%;
+    height: 150px;
+    /* background-color: rgb(255, 0, 0); */
+    margin-top: 4px;
+}
+#header_wrapper #logo{
+    float: left;
+    width: 14.5%;
+    height: 150px;
+    background-color: rgb(255, 0, 0);
+}
+#header_wrapper #slider{
+    float: left;
+    width: 65%;
+    height: 150px;
+    background-color: rgb(255, 0, 0);
+    margin-left: .5%;
+}
+#header_wrapper #add{
+    float: left;
+    width: 19.5%;
+    height: 150px;
+    background-color: rgb(255, 0, 0);
+    margin-left: .5%;
+}
+
+
+
+
+
+
+#content_wrapper{
+    float: left;
+    width: 100%;
+    height: 500px;
+    /*background-color: blue; */
+    margin-top: 4px;
+}
+#content_wrapper #left_content{
+    float: left;
+    width: 20%;
+    height: 500px;
+    background-color: blue;
+}
+#content_wrapper #main_content{
+    float: left;
+    width: 79.5%;
+    height: 500px;
+    background-color: blue;
+    margin-left: .5%;
+}
+.flag_bg{
+    float: left;
+    height: 350px;
+    width: 600px;
+    background-color: green;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.flag_circle{
+    float: left;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    margin-left: 150px;
+    margin-top: 75px;
+    border-radius: 100px;
+    transition: all 1s;
+    background: url(../image/safa\ world\ logo.png);
+    transform: skewY(-20deg);
+}
+.flag_circle:hover{
+    /* transform: scale(1.3); */
+    /* transform: rotateX(90deg); */
+    /* transform: rotateY(90deg); */
+    /* transform: rotate(360deg) scale(1.5); */
+    
+}
+
+
+
+
+
+#big_footer_wrapper{
+    float: left;
+    width: 100%;
+    height: 200px;
+    /*background-color: blue; */
+    margin-top: 4px;
+}
+#big_footer_wrapper #big_footer_one{
+    float: left;
+    width: 24.625%;
+    height: 200px;
+    background-color: blue;
+}
+#big_footer_wrapper #big_footer_two{
+    float: left;
+    width: 24.625%;
+    height: 200px;
+    background-color: blue;
+    margin-left: .5%;
+}
+#big_footer_wrapper #big_footer_three{
+    float: left;
+    width: 24.625%;
+    height: 200px;
+    background-color: blue;
+    margin-left: .5%;
+}
+#big_footer_wrapper #big_footer_four{
+    float: left;
+    width: 24.625%;
+    height: 200px;
+    background-color: blue;
+    margin-left: .5%;
+}
+
+
+
+
+
+
+#footer_wrapper{
+    float: left;
+    width: 100%;
+    height: 50px;
+    background-color: blue;
+    margin-top: 4px;
+}
