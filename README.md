@@ -1,4 +1,4 @@
-<img src="https://i.ibb.co/TW0QzLc/task-manager-cover-picture.jpg" width="100%">
+<img src="https://i.ibb.co/nrdvBys/task-manager-cover-picture.jpg" width="100%">
 
 
 <div align="center">
