@@ -3,7 +3,7 @@
 
 <div align="center">
 <h1>Task Manager</h1>
-A Python-Django Task Manager Project with REST API 
+A Python-Django Task Management Web Application with REST API
 <br>
 <br>
 
