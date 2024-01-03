@@ -3,52 +3,26 @@
 A Python-Django Task Manager Project with REST API 
 <br>
 <br>
-<img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue">
-<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green">
-<h3>Project's Short Demo</h3>
 
-https://github.com/MusfiqDehan/task-manager/assets/47440165/7219a3f5-e809-4182-8478-ec85f105a210
-
-For more detail overview visit this link: https://youtu.be/4XTaPGTVto0
+<h3>Project's Short Video link: https://youtu.be/4XTaPGTVto0</h3>
 
 </div>
 
-## Table of Contents
-
--   [Easy Login Info](#easy-login-info)
--   [Technology Used](#technology-used)
--   [Added Features](#added-features)
--   [How to Run Locally](#how-to-run-locally)
-    -   [Clone from GitHub](#clone-from-github)
-    -   [Setup PostgreSQL Database](#setup-postgresql-database)
-    -   [Import Data from db.json](#import-data-from-dbjson)
-    -   [Admin Panel](#admin-panel)
--   [API Details](#api-details)
+<br>
 
 ## Technology Used
 
--   **Frontend:** HTML5, CSS3, Bootstrap5, JavaScript
--   **Backend:** Python=3.11.4, Django=4.2.5
--   **Database:** PostgreSQL, (Hosted on Render for Production)
--   **Static and Media Upload:** AWS S3 Bucket using Cloudflare R2
+-   **Frontend:** HTML5, CSS3, Bootstrap5
+-   **Backend:** Python=3.11.4, Django=4.2.5, djangorestframework==3.14.0
+-   **Database:** PostgreSQL
 -   **API:** Django-REST-Framework
--   **Version Control:** Git, GitHub
--   **Editor:** VS Code
--   **Operating System:** Ubuntu 23.04 LTS
--   **Browser(Tested On):** Google Chrome, Microsoft Edge, Mozilla Firefox
 
-[⬆️**Go to Table of Contents**](#table-of-contents)
+<br>
 
-## How to Run Locally
+## How to Run This Project Step by step
+
 
 ### Clone from GitHub
-
--   Install Python3
--   Install pip
-
-```bash
-sudo apt install python3-pip
-```
 
 -   Clone the repository
 
@@ -65,19 +39,19 @@ cd task-manager
 -   Create a virtual environment
 
 ```bash
-python3 -m venv venv
+python -m venv venv
 ```
 
 -   Activate the virtual environment
 
 ```bash
-source venv/bin/activate
+source venv/Scripts/activate
 ```
 
--   Install the dependencies
+-   Install the dependencies or Lib
 
 ```bash
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 -   Run the server
@@ -88,52 +62,31 @@ python manage.py runserver
 
 -   Open the browser and go to http://127.0.0.1:8000/
 
--   To deactivate the virtual environment
 
-```bash
-deactivate
-```
-
-[⬆️**Go to Table of Contents**](#table-of-contents)
+<br>
 
 ### Setup PostgreSQL Database
 
 -   Install PostgreSQL
 
 ```bash
-sudo apt install postgresql postgresql-contrib
+pip install psycopg2
 ```
 
 -   Login to PostgreSQL
 
-```bash
-sudo -u postgres psql
-```
-
 -   Create a database
-
-```bash
-CREATE DATABASE task_manager;
-```
 
 -   Create a user
 
-```bash
-
-CREATE USER task_manager_user WITH PASSWORD 'task_manager_password';
-```
-
 -   Grant privileges to the user
-
-```bash
-GRANT ALL PRIVILEGES ON DATABASE task_manager TO task_manager_user;
-```
 
 -   Exit from PostgreSQL
 
-```bash
-\q
-```
+
+<br>
+
+### Create environment variables & Config settings.py
 
 -   Open the `settings.py` file from `task_manager` directory
 
@@ -152,16 +105,16 @@ DB_PORT=5432
 
 See the `.env.example` file for reference.
 
-[⬆️**Go to Table of Contents**](#table-of-contents)
+<br>
 
-### Import Data from db.json
+### Import Data from database.json
 
--   You will find a file named `db.json` in the root directory
+-   You will find a file named `database.json` in the root directory
 
--   Run the following command to import data from `db.json`
+-   Run the following command to import data from `database.json`
 
 ```bash
-python3 manage.py loaddata db.json
+python manage.py loaddata database.json
 ```
 
 -   Migrate Database
@@ -174,7 +127,7 @@ python manage.py make migrations
 python manage.py migrate
 ```
 
-[⬆️**Go to Table of Contents**](#table-of-contents)
+<br>
 
 ### Admin Panel
 
@@ -184,9 +137,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
--   Open the browser and go to http://127.0.0.1:8000/
-
--   To access the admin panel, go to http://127.0.0.1:8000/admin/
+-   Open the browser and go to http://127.0.0.1:8000/admin/ for access the admin panel
 
 -   Login with the following credentials:
 
@@ -203,15 +154,15 @@ python manage.py createsuperuser
 
 -   Now you can access the admin panel with the credentials you have just created
 
-[⬆️**Go to Table of Contents**](#table-of-contents)
+<br>
 
 ## API Details
 
--   **Endpoint:** http://127.0.0.1:8000/tasks/api/v1/tasks
--   **Method:** GET
+-   **Endpoint:** http://127.0.0.1:8000/task-api-view/
+-   **Method:** GET, POST
 -   **Description:**
     -   Returns all the tasks
--   **Endpoint:** http://127.0.0.1:8000/tasks/api/v1/tasks/1
+-   **Endpoint:** http://127.0.0.1:8000/task-api-view/9/
 -   **Method:** GET, PUT, PATCH, DELETE
 -   **Description:**
     -   Returns a single task
@@ -219,4 +170,3 @@ python manage.py createsuperuser
     -   Partially updates a single task
     -   Deletes a single task
 
-[⬆️**Go to Table of Contents**](#table-of-contents)
