@@ -2,12 +2,12 @@
 
 
 <div align="center">
-<h1>Task Manager</h1>
+<h1>Task Management Application</h1>
 A Python-Django Task Management Web Application with REST API
 <br>
 <br>
 
-<h3>Project's Short Video link: https://youtu.be/4XTaPGTVto0</h3>
+<h3>Project's Short Video link: Video Link</h3>
 
 </div>
 
@@ -98,12 +98,22 @@ pip install psycopg2
 ```bash
 SECRET_KEY=your_secret_key
 DEBUG=False
-DB_ENGINE=django.db.backends.postgresql
-DB_NAME=task_manager
-DB_USER=task_manager_user
-DB_PASSWORD=task_manager_password
-DB_HOST=localhost
-DB_PORT=5432
+
+#Email BackEND (For Send Mail, Forget Password Etc.) - Optional---------***
+EMAIL_BackEND = django.core.mail.backends.smtp.EmailBackend #No Change needed
+EMAIL_USE_TLS = True     #No Change needed
+EMAIL_HOST = smtp.gmail.com      #No Change needed
+EMAIL_HOST_USER = EMAIL  #must enter your email
+EMAIL_HOST_PASSWORD = EMAIL_APP_PASSWORD   #must enter your email app password
+EMAIL_PORT = 587    #No Change needed
+
+#Database Config-----------------***
+DB_ENGINE=django.db.backends.postgresql   #No Change needed
+DB_NAME=Database_Name
+DB_USER=Database_USER
+DB_PASSWORD=Database_PASSWORD
+DB_HOST=Database_HOST
+DB_PORT=Database_PORT
 ```
 
 See the `.env.example` file for reference.
@@ -114,11 +124,6 @@ See the `.env.example` file for reference.
 
 -   You will find a file named `database.json` in the root directory
 
--   Run the following command to import data from `database.json`
-
-```bash
-python manage.py loaddata database.json
-```
 
 -   Migrate Database
 
@@ -130,6 +135,12 @@ python manage.py make migrations
 python manage.py migrate
 ```
 
+
+-   Run the following command to import data from `database.json`
+
+```bash
+python manage.py loaddata database.json
+```
 <br>
 
 ### Admin Panel
